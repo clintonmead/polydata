@@ -4,7 +4,7 @@ synopsis:             Wrap together data and it's constraints.
 description:
   This package allows one to pass data, particularly functions, together with a constraint which describes how
   polymorphic that data is. This constraint can then be used in a generic way to produce quite polymorphic functions,
-  for example, a "map" function that works on a pair of two different types,
+  for example, a "map" function that works on a pair of two different types, 
 license: MIT
 license-file: LICENSE
 copyright: Clinton Mead (2017)
