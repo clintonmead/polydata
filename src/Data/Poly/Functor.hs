@@ -7,7 +7,7 @@
 {-# LANGUAGE ConstraintKinds #-}
 
 module Data.Poly.Functor (
-  PolyFunctor, hmap, PolyFunctorConstraint
+  PolyFunctor(hmap), PolyFunctorConstraint
   )
 where
 
