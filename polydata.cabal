@@ -1,10 +1,14 @@
 name:                 polydata
-version:              0.1.0.0
+version:              0.2
 synopsis:             Wrap together data and it's constraints.
 description:
-  This package allows one to pass data, particularly functions, together with a constraint which describes how
+  This package, together with its dependency [polydata-core](https://hackage.haskell.org/package/polydata-core),
+  allows one to pass data, particularly functions, together with a constraint which describes how
   polymorphic that data is. This constraint can then be used in a generic way to produce quite polymorphic functions,
-  for example, a "map" function that works on a pair of two different types,
+  for example, a "map" function that works on a pair of two different types.
+  .
+  See [Data.Poly](https://hackage.haskell.org/package/polydata-core/docs/Data-Poly.html)
+  for a basic tutorial.
 license: MIT
 license-file: LICENSE
 copyright: Clinton Mead (2017)
@@ -21,8 +25,8 @@ source-repository head
   location: https://github.com/clintonmead/polydata.git
 
 library
-  exposed-modules: Data.Poly, Data.Poly.Function, Data.Poly.Functor
-  build-depends:        base == 4.9.*, indextype == 0.2.*, constraint-manip == 0.1.*
+  exposed-modules: Data.Poly.Function, Data.Poly.Functor
+  build-depends:        base == 4.9.*, indextype == 0.2.1.*, constraint-manip == 0.1.*, polydata-core == 0.1.*
   hs-source-dirs:       src
   default-language:     Haskell2010
 
