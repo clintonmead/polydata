@@ -21,6 +21,7 @@ import Control.IndexT
 
 import Control.ConstraintManip
 import Data.List (foldl')
+import Data.Type.Equality (type (~~))
 
 import Test.Hspec (hspec, it, shouldBe)
 
@@ -37,7 +38,7 @@ type FoldConstraint t = (
   IndexT 1 t ~ (IndexT 0 (IndexT 0 t)), -- also, the first argument of the function which is the first argument is the same as the second argument of the function
   IsData 1 (IndexT 2 t), -- the third argument is a data type with one variable
   Foldable (GetConstructor1 (IndexT 2 t)), -- the constructor of that third argument is Foldable
-  IndexC 1 0 (IndexT 2 t) ~ IndexT 1 (IndexT 0 t) -- the parameter to the constructor of Foldable is the same as the second argument of the fold function
+  IndexC 1 0 (IndexT 2 t) ~~ IndexT 1 (IndexT 0 t) -- the parameter to the constructor of Foldable is the same as the second argument of the fold function
   )
 
 class (FoldConstraint t) => FoldConstraintC t

@@ -39,7 +39,7 @@ packages:
 - '.'
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: [constraint-manip-0.1.0.0, indextype-0.2.2.0, polydata-core-0.1.0.0]
+extra-deps: [constraint-manip-0.1.0.0, indextype-0.3.0.0, polydata-core-0.1.0.0]
 
 # Override default flag values for local packages and extra-deps
 flags: {}
